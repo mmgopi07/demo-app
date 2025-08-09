@@ -38,7 +38,7 @@ jobs:
         -r
         --skip-git
        
-        --fail-on-vuln: false
+        --fail-on-vuln = false
         ./
   scan-pr:
     if: ${{ github.event_name == 'pull_request' || github.event_name == 'merge_group' }}
@@ -48,5 +48,5 @@ jobs:
       scan-args: |-
         -r
         --skip-git
-        --fail-on-vuln: false
+        --fail-on-vuln = false
         ./
